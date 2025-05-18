@@ -1,0 +1,45 @@
+.extension-switcher-bar__title h1 {
+    font-size: 1.85rem;
+    font-weight: 600;
+}
+
+.extension-switcher-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.extension-switcher-bar__radios {
+    display: flex;
+    gap: 10px;
+}
+
+.extension-switcher-bar__radios input[type="radio"] {
+    display: none; /* Hide the radio buttons */
+}
+
+.extension-switcher-bar__radios label {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid var(--Neutral-700);
+    border-radius: 20px; /* Rounded corners */
+    background-color: var(--Neutral-700); /* Default inactive color */
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.extension-switcher-bar__radios input[type="radio"]:checked + label {
+    background-color: var(--Red-400); /* Active color */
+    border-color: var(--Red-400);
+    color: var(--Neutral-900);
+}
+
+.extension-switcher-bar__radios label:hover {
+    background-color: var(--Neutral-600); /* Slightly lighter on hover */
+    border-color: var(--Neutral-600);
+}

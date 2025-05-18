@@ -1,0 +1,123 @@
+.extension-card{
+    max-width: 350px;
+    padding: 1rem;
+    border: 2px solid var(--Neutral-700);
+    background: var(--Neutral-800);
+    border-radius: 1rem;
+}
+
+.extension-card__header{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.extension-card__header h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.extension-card__header p{
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--Neutral-300);
+}
+.extension-card__header button{
+    background: var(--Red-400);
+    color: var(--Neutral-900);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.extension-card__header button:hover{
+    background: var(--Red-500);
+}
+.extension-card__header button:active{
+    background: var(--Red-700);
+}
+
+.extension-card__content--title{
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 1rem 0 0.3rem 0;
+
+}
+
+.extension-card__content--description{
+    font-size: 0.5rem;
+
+}
+
+.extension-card__footer{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.extension-card__remove{
+    background: var(--Neutral-700);
+    color: var(--Neutral-100);
+    border: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--Neutral-700);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.extension-card__remove:hover{
+    background: var(--Neutral-800);
+    border: 2px solid var(--Neutral-700);
+}
+.extension-card__remove:active{
+    background: var(--Neutral-900);
+}
+.extension-card__remove:disabled{
+    background: var(--Neutral-600);
+    cursor: not-allowed;
+}
+
+.extension-card__toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.extension-card__toggle-input {
+    display: none; /* Hide the checkbox */
+}
+
+.extension-card__toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Neutral-700); /* Default background color */
+    border-radius: 25px; /* Rounded corners for the slider */
+    transition: background-color 0.3s;
+}
+
+.extension-card__toggle-slider::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 2.5px;
+    background-color: var(--Neutral-100); /* Default knob color */
+    border-radius: 50%; /* Rounded knob */
+    transition: transform 0.3s;
+}
+
+/* When the checkbox is checked, apply active styles */
+.extension-card__toggle-input:checked + .extension-card__toggle-slider {
+    background-color: var(--Red-500); /* Active background color */
+}
+
+.extension-card__toggle-input:checked + .extension-card__toggle-slider::before {
+    transform: translateX(25px); /* Move the knob to the right */
+}
