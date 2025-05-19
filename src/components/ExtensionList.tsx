@@ -1,8 +1,24 @@
-import Extension from './Extension'
+import Extension from './Extension';
+import { useExtensionContext } from '../contextAPI/context.tsx';
+import './ExtensionList.css'
 
 function ExtensionList() {
-  return (
-    <Extension />
+   const { extensionList } = useExtensionContext();
+  return ( 
+  <>
+    {console.log(extensionList)}
+    <div className="extension-list">
+    {extensionList.map((extension) => (
+      <Extension 
+        key={extension.name}
+        logo={extension.logo}
+        name={extension.name} 
+        description={extension.description} 
+        isActive={extension.isActive} 
+      />
+    ))}
+    </div>
+  </>
   )
 }
 

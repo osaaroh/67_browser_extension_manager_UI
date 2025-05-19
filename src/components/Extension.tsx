@@ -1,17 +1,17 @@
 import React from 'react'
 import './Extension.css'
 import IcoDevLens from '../assets/images/logo-devlens.svg'
-function Extension() {
+function Extension({logo, name, description, isActive}) {
   return (
     <div className="extension-card">
       <div className="extension-card__header">
         <div className="extension-card__header--image">
-          <img src={IcoDevLens} alt="" />
+          <img src={logo} alt="" />
         </div>
 
         <div className="extension-card__content">
-          <h4 className='extension-card__content--title'>DevLens</h4>
-          <p className='extension-card__content--description'>Quickly inspect page layouts and visualize element boundaries..</p>
+          <h4 className='extension-card__content--title'>{name}</h4>
+          <p className='extension-card__content--description'>{description}</p>
         </div>
       </div>
       
