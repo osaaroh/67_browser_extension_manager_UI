@@ -1,7 +1,7 @@
 import React from 'react'
 import './Extension.css'
 import IcoDevLens from '../assets/images/logo-devlens.svg'
-function Extension({logo, name, description, isActive}) {
+function Extension({logo, name, description, isActive}: {logo: string, name: string, description: string, isActive: boolean}) {
   return (
     <div className="extension-card">
       <div className="extension-card__header">

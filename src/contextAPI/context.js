@@ -16,7 +16,7 @@ const AppProvider =({children})=>{
       };
     
       //4 create a function to open and close the sidebar
-      const removeExtension = (name: string) =>{
+      const removeExtension = (name) =>{
         const newExtensionList = extensionList.filter((extension)=> extension.name !==name);
             setExtensionList(newExtensionList);
         }
