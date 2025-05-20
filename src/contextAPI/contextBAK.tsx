@@ -42,32 +42,15 @@ export const ExtensionProvider = ({ children }: { children: ReactNode }) => {
 
 
   const [extensionList, setExtensionList] = useState<Extension[]>(initialExtensions);
-
-  // New state for the filter mode
-const [filter, setFilter] = useState<'all' | 'active' | 'inactive'>('all');
-
-// Derived state
-const getFilteredExtensions = () => {
-  switch (filter) {
-    case 'active':
-      return extensionList.filter(ext => ext.isActive);
-    case 'inactive':
-      return extensionList.filter(ext => !ext.isActive);
-    default:
-      return extensionList;
-  }
-};
-
-const updatedExtensionList = getFilteredExtensions();
-
+  const [updatedExtensionList, setUpdatedExtensionList] = useState<Extension[]>(initialExtensions);
 
 
   const toggleTheme = () => {
     setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
   };
 
-  const removeExtension = (name: string) => {
-    setExtensionList(prev => prev.filter(ext => ext.name !== name));
+  const removeExtension = (id: string) => {
+    setExtensionList(prev => prev.filter(ext => ext.id !== id));
   };
 
   const toggleExtensionActive = (name: string) => {
@@ -78,11 +61,33 @@ const updatedExtensionList = getFilteredExtensions();
     );
   };
 
-const showExtensionActive = () => setFilter('active');
-const showExtensionInactive = () => setFilter('inactive');
-const showAllExtensions = () => setFilter('all');
+  // const showExtensionActive = () => {
+  //   // const updatedExtensionList  = extensionList.filter((extension)=> extension.isActive == true);
+  //   // return updatedExtensionList;
+  //   setUpdatedExtensionList(extensionList.filter((extension) => extension.isActive == true));
+  // };
 
+  // const showExtensionInactive = () => {
+  //   // const updatedExtensionList  = extensionList.filter((extension)=> extension.isActive == false);
+  //   // return updatedExtensionList;
+  //   setUpdatedExtensionList(extensionList.filter((extension) => extension.isActive == false));
+  // };
 
+  const showExtensionActive = () => {
+    setUpdatedExtensionList(() => 
+  extensionList.filter(extension => extension.isActive === true)
+);
+  };
+  const showExtensionInactive = () => {
+    setUpdatedExtensionList(() => 
+  extensionList.filter(extension => extension.isActive === false)
+);
+  };
+
+  const showAllExtensions = () => {
+    //return extensionList;
+    setUpdatedExtensionList(extensionList);
+  };
 
   return (
     <ExtensionContext.Provider
@@ -110,4 +115,7 @@ export const useExtensionContext = () => {
   }
   return context;
 };
+function useEffect(arg0: () => void, arg1: Extension[][]) {
+  throw new Error('Function not implemented.');
+}
 

@@ -1,7 +1,7 @@
-import React from 'react'
 import './Extension.css'
-import IcoDevLens from '../assets/images/logo-devlens.svg'
+import { useExtensionContext } from '../contextAPI/context.tsx'
 function Extension({logo, name, description, isActive}: {logo: string, name: string, description: string, isActive: boolean}) {
+const {removeExtension, toggleExtensionActive} =  useExtensionContext()
   return (
     <div className="extension-card">
       <div className="extension-card__header">
@@ -16,9 +16,12 @@ function Extension({logo, name, description, isActive}: {logo: string, name: str
       </div>
       
       <div className="extension-card__footer">
-        <button className="extension-card__remove">Remove</button>
+        <button className="extension-card__remove" onClick={()=>removeExtension(name)}>Remove</button>
         <label className="extension-card__toggle">
-          <input type="checkbox" className="extension-card__toggle-input" />
+          <input type="checkbox" className="extension-card__toggle-input" checked={isActive} onChange={(e)=>{
+            isActive? e.currentTarget.checked = false : e.currentTarget.checked = true  ;
+              toggleExtensionActive(name);
+          }}/>
           <span className="extension-card__toggle-slider"></span>
         </label>
       </div>

@@ -1,14 +1,21 @@
 import Extension from './Extension';
 import { useExtensionContext } from '../contextAPI/context.tsx';
 import './ExtensionList.css'
+import { useEffect } from 'react';
 
 function ExtensionList() {
-   const { extensionList } = useExtensionContext();
+   const { updatedExtensionList } = useExtensionContext();
+  //  useEffect(() => {
+  //   // This runs whenever updatedExtensionList changes
+  //   console.log('updatedExtensionList changed:', updatedExtensionList);
+
+  //   // You can perform any side effects here if needed, or update internal state
+  // }, [updatedExtensionList]);
   return ( 
   <>
-    {console.log(extensionList)}
+    {console.log(updatedExtensionList)}
     <div className="extension-list">
-    {extensionList.map((extension) => (
+    {updatedExtensionList.map((extension) => (
       <Extension 
         key={extension.name}
         logo={extension.logo}

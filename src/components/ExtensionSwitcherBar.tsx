@@ -3,16 +3,7 @@ import './ExtensionSwitcherBar.css'
 import { useExtensionContext } from '../contextAPI/context.tsx'
 function ExtensionSwitcherBar() {
   const { showExtensionActive, showExtensionInactive, showAllExtensions } = useExtensionContext()
-  const handleRadioChange = (event: any) => {
-    const value = event.target.value
-    if (value === 'active') {
-      showExtensionActive()
-    } else if (value === 'inactive') {
-      showExtensionInactive()
-    } else {
-      showAllExtensions()
-    }
-  }
+
   return (
     <div className="extension-switcher-bar">
       <div className="extension-switcher-bar__title">
