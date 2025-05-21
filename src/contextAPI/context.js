@@ -21,7 +21,7 @@ const AppProvider =({children})=>{
             setExtensionList(newExtensionList);
         }
 
-        const toggleExtensionActive = (name: string) => {
+        const toggleExtensionActive = (name) => {
         const updatedExtensionList = extensionList.map((extension) => 
           extension.name === name ? { ...extension, isActive: !extension.isActive } : extension
         );

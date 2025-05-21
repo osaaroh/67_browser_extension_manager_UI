@@ -7,7 +7,7 @@ import { ExtensionProvider } from './contextAPI/context.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ExtensionProvider>
-    <App />
+      <App />
     </ExtensionProvider>
   </StrictMode>,
 )
