@@ -21,21 +21,6 @@
     font-weight: 400;
     color: var(--Neutral-300);
 }
-.extension-card__header button{
-    background: var(--Red-400);
-    color: var(--Neutral-900);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.extension-card__header button:hover{
-    background: var(--Red-500);
-}
-.extension-card__header button:active{
-    background: var(--Red-700);
-}
 
 .extension-card__content--title{
     font-size: 0.85rem;
