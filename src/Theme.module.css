@@ -43,7 +43,7 @@
 .lightTheme {
   --bg-gradient: linear-gradient(var(--Light-Gradient));
   --section-title: var(--Neutral-900);
-  --text-color: var(--Neutral-700)
+  --text-color: var(--Neutral-700);
   --card-border: hsl(0, 0%, 78%);
   --card-bg: var(--Neutral-100);
   --card-bg-hover: var(--Neutral-0);
