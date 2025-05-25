@@ -3,8 +3,7 @@ import styles from '../Theme.module.css';
 import './ExtensionSwitcherBar.css'
 import { useExtensionContext } from '../contextAPI/context.tsx'
 function ExtensionSwitcherBar() {
-  const { showExtensionActive, showExtensionInactive, showAllExtensions } = useExtensionContext()
-  let theme = 'da'
+  const { theme, showExtensionActive, showExtensionInactive, showAllExtensions } = useExtensionContext()
 const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
   return (
     <div className={`${styles.appContainer} ${themeClass} extension-switcher-bar`} >

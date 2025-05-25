@@ -3,7 +3,7 @@ import { useExtensionContext } from '../contextAPI/context.tsx'
 import styles from '../Theme.module.css'; 
 function Extension({logo, name, description, isActive}: {logo: string, name: string, description: string, isActive: boolean}) {
 const {removeExtension, toggleExtensionActive} =  useExtensionContext();
-let theme = 'da'
+const {theme} = useExtensionContext();
 const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
   return (
     <div className={`${styles.appContainer} ${themeClass} extension-card`}  >

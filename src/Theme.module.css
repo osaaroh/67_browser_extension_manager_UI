@@ -42,10 +42,11 @@
 /* Theme.module.css */
 .lightTheme {
   --bg-gradient: linear-gradient(var(--Light-Gradient));
+  --navbar: var(--Neutral-0);
   --section-title: var(--Neutral-900);
   --text-color: var(--Neutral-700);
   --card-border: hsl(0, 0%, 78%);
-  --card-bg: var(--Neutral-100);
+  --card-bg: var(--Neutral-0);
   --card-bg-hover: var(--Neutral-0);
   --card-txt: var(--Neutral-700);
   --card-title: var(--Neutral-800);
@@ -54,10 +55,12 @@
   --btn-disabled: var(--Neutral-600);
   --toggle-bg-default: var(--Neutral-300);
   --toggle-knob-default: var(--Neutral-100);
+  --theme-btn: var(--Neutral-100);
 }
 
 .darkTheme {
   --bg-gradient: linear-gradient(var(--Dark-Gradient));
+  --navbar: var(--Neutral-700);
   --section-title: var(--Neutral-100);
   --text-color: var(--Neutral-700);
   --card-border: var(--Neutral-700);
@@ -70,6 +73,7 @@
   --btn-disabled: var(--Neutral-600);
   --toggle-bg-default: var(--Neutral-700);
   --toggle-knob-default: var(--Neutral-100);
+  --theme-btn: var(--Neutral-800);
 }
 
 .appContainer {

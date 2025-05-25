@@ -46,6 +46,17 @@ export const ExtensionProvider = ({ children }: { children: ReactNode }) => {
   // New state for the filter mode
 const [filter, setFilter] = useState<'all' | 'active' | 'inactive'>('all');
 
+// Update body background color based on theme
+React.useEffect(() => {
+  //const body = document.querySelector('html') as HTMLHtmlElement;
+  const html = document.documentElement;
+  if (theme === 'dark') {
+    html.style.background = 'linear-gradient(180deg, #040918 0%, #091540 100%)';
+  } else {
+    html.style.background = 'linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%)';
+  }
+}, [theme]);
+
 // Derived state
 const getFilteredExtensions = () => {
   switch (filter) {
