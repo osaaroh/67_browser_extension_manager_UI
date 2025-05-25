@@ -1,11 +1,13 @@
 import React from 'react'
+import styles from '../Theme.module.css'; 
 import './ExtensionSwitcherBar.css'
 import { useExtensionContext } from '../contextAPI/context.tsx'
 function ExtensionSwitcherBar() {
   const { showExtensionActive, showExtensionInactive, showAllExtensions } = useExtensionContext()
-
+  let theme = 'da'
+const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
   return (
-    <div className="extension-switcher-bar">
+    <div className={`${styles.appContainer} ${themeClass} extension-switcher-bar`} >
       <div className="extension-switcher-bar__title">
         <h1>Extensions List</h1>
       </div>

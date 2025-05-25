@@ -1,6 +1,7 @@
 .extension-switcher-bar__title h1 {
     font-size: 1.85rem;
     font-weight: 600;
+    color: var(--section-title);
 }
 
 .extension-switcher-bar {
@@ -24,10 +25,10 @@
 .extension-switcher-bar__radios label {
     display: inline-block;
     padding: 10px 20px;
-    border: 2px solid var(--Neutral-700);
+    border: 2px solid var(--card-border);
     border-radius: 20px; /* Rounded corners */
-    background-color: var(--Neutral-700); /* Default inactive color */
-    color: white;
+    background-color: var(--card-bg); /* Default inactive color */
+    color: var(--btn-txt);
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s, border-color 0.3s;
@@ -36,10 +37,10 @@
 .extension-switcher-bar__radios input[type="radio"]:checked + label {
     background-color: var(--Red-400); /* Active color */
     border-color: var(--Red-400);
-    color: var(--Neutral-900);
+    color: var(--btn-txt-active);
 }
 
 .extension-switcher-bar__radios label:hover {
-    background-color: var(--Neutral-600); /* Slightly lighter on hover */
-    border-color: var(--Neutral-600);
+    background-color: var(--card-bg-hover); /* Slightly lighter on hover */
+    border-color: var(--card-border);
 }
