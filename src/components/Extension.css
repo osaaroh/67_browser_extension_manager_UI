@@ -1,8 +1,8 @@
 .extension-card{
     /* max-width: 350px; */
     padding: 1rem;
-    border: 2px solid var(--Neutral-700);
-    background: var(--Neutral-800);
+    border: 2px solid var(--card-border);
+    background: var(--card-bg);
     border-radius: 1rem;
 }
 
@@ -19,13 +19,14 @@
 .extension-card__header p{
     font-size: 0.85rem;
     font-weight: 400;
-    color: var(--Neutral-300);
+    color: var(--card-txt);
 }
 
 .extension-card__content--title{
     font-size: 0.85rem;
     font-weight: 600;
     margin: 1rem 0 0.3rem 0;
+    color: var(--card-title);
 
 }
 
@@ -42,24 +43,24 @@
 }
 
 .extension-card__remove{
-    background: var(--Neutral-700);
-    color: var(--Neutral-100);
+    background: var(--card-bg);
+    color: var(--btn-txt);
     border: none;
     padding: 0.5rem 1rem;
-    border: 2px solid var(--Neutral-700);
+    border: 2px solid var(--card-border);
     border-radius: 1rem;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 .extension-card__remove:hover{
-    background: var(--Neutral-800);
-    border: 2px solid var(--Neutral-700);
+    background: var(--card-bg-hover);
+    border: 2px solid var(--card-border);
 }
 .extension-card__remove:active{
-    background: var(--Neutral-900);
+    background: var(--card-bg-hover);
 }
 .extension-card__remove:disabled{
-    background: var(--Neutral-600);
+    background: var(--btn-disabled);
     cursor: not-allowed;
 }
 
@@ -81,7 +82,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--Neutral-700); /* Default background color */
+    background-color: var(--toggle-bg-default); /* Default background color */
     border-radius: 25px; /* Rounded corners for the slider */
     transition: background-color 0.3s;
 }
@@ -93,7 +94,7 @@
     width: 20px;
     left: 3px;
     bottom: 2.5px;
-    background-color: var(--Neutral-100); /* Default knob color */
+    background-color: var(--toggle-knob-default); /* Default knob color */
     border-radius: 50%; /* Rounded knob */
     transition: transform 0.3s;
 }

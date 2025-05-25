@@ -41,26 +41,32 @@
 
 /* Theme.module.css */
 .lightTheme {
-  --bg-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --bg-gradient: linear-gradient(var(--Light-Gradient));
   --text-color: hsl(0, 0%, 93%);
-  --card-border: hsl(225, 23%, 24%);
-  --card-bg: hsl(226, 25%, 17%);
+  --card-border: hsl(0, 0%, 78%);
+  --card-bg: hsl(200, 60%, 99%);
+  --card-txt: hsl(225, 23%, 24%);
+  --card-title: hsl(226, 25%, 17%);
+  --btn-txt: hsl(226, 25%, 17%);
+  --btn-disabled: var(--Neutral-600);
+  --toggle-bg-default: var(--Neutral-300);
+  --toggle-knob-default: var(--Neutral-100);
 }
 
 .darkTheme {
-  --bg-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
-  --text-color: hsl(225, 23%, 24%);
-  --card-border: hsl(225, 23%, 24%);
-  --card-bg: hsl(226, 25%, 17%);
-  --card-txt: hsl(0, 0%, 78%);
-
-  
+  --bg-gradient: linear-gradient(var(--Dark-Gradient));
+  --text-color: var(--Neutral-700);
+  --card-border: var(--Neutral-700);
+  --card-bg: var(--Neutral-800);
+  --card-bg-hover: var(--Neutral-900);
+  --card-txt: var(--Neutral-300);
+  --card-title: var(--Neutral-100);
+  --btn-txt: var(--Neutral-100);
+  --btn-disabled: var(--Neutral-600);
+  --toggle-bg-default: var(--Neutral-700);
+  --toggle-knob-default: var(--Neutral-100);
 }
 
 .appContainer {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  min-height: 100vh;
-  transition: all 0.3s ease;
-  padding: 1rem;
+  
 }
