@@ -1,5 +1,5 @@
 .extension-card{
-    /* max-width: 350px; */
+    max-width: 650px;
     padding: 1rem;
     border: 2px solid var(--card-border);
     background: var(--card-bg);

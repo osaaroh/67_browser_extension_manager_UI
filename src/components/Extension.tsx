@@ -20,7 +20,8 @@ const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
       
       <div className="extension-card__footer">
         <button className="extension-card__remove" onClick={()=>removeExtension(name)}>Remove</button>
-        <label className="extension-card__toggle">
+        <label className="extension-card__toggle" tabIndex={0} 
+        onKeyDown={(e) => { if (e.key === 'Enter' || e.code === 'Enter' || e.code === 'NumpadEnter' || e.key === ' ') toggleExtensionActive(name) }} >
           <input type="checkbox" className="extension-card__toggle-input" checked={isActive} onChange={(e)=>{
             isActive? e.currentTarget.checked = false : e.currentTarget.checked = true  ;
               toggleExtensionActive(name);

@@ -53,7 +53,7 @@ html{
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     color: var(--Neutral-100);
 }
 body {

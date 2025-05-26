@@ -69,7 +69,7 @@
   --card-txt: var(--Neutral-300);
   --card-title: var(--Neutral-100);
   --btn-txt: var(--Neutral-100);
-  --btn-txt-active: var(--card-txt);
+  --btn-txt-active: var(--Neutral-0);
   --btn-disabled: var(--Neutral-600);
   --toggle-bg-default: var(--Neutral-700);
   --toggle-knob-default: var(--Neutral-100);
