@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from '../Theme.module.css'; 
 import './ThemeSwitcher.css'
 import IconSun from '../assets/images/icon-sun.svg'

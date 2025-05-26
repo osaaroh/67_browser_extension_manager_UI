@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 
 ### Links
@@ -51,44 +51,39 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 
 
 ### What I learned
 
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+```jsx label accessibility
+
+ <input 
+    aria-hidden="true"
+    type="radio" 
+    id="all" 
+    name="extension-status" 
+    onChange={() => { showAllExtensions() }} 
+    onKeyDown={(e) => { if (e.key === 'Enter' || e.code === 'Enter' || e.code === 'NumpadEnter' || e.key === ' ') showAllExtensions() }} 
+    defaultChecked 
+  />
+  <label 
+    htmlFor="all"
+    role="switch" 
+    tabIndex={0} 
+    onKeyDown={(e) => { if (e.key === 'Enter' || e.code === 'Enter' || e.code === 'NumpadEnter' || e.key === ' ') showAllExtensions() }}
+    aria-label='Show all extensions'
+    //aria-checked="true"
+  >
+    All
+  </label>
+
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-
-### Continued development
-
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me 
-- [Example resource 2](https://www.example.com) - This is an amazing article 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Osaro](https://osaro.vercel.app)
+- Frontend Mentor - [@Osaaroh](https://www.frontendmentor.io/profile/osaaroh)
 
-## Acknowledgments
 
