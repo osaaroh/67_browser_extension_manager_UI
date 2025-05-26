@@ -4,7 +4,30 @@ import { useExtensionContext } from '../contextAPI/context.tsx'
 function ExtensionSwitcherBar() {
   const { theme, showExtensionActive, showExtensionInactive, showAllExtensions } = useExtensionContext()
 const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
+// Helper Function to toggle aria-checked on the label. Logic not implemented yet, but can be used to manage the state of the switch visually and for accessibility.
+
+
+// const actualCheckbox = document.getElementById('myActualCheckbox');
+// const switchLabel = document.getElementById('mySwitchLabel');
+
+// function updateSwitchState() {
+//   const isChecked = actualCheckbox.checked;
+//   switchLabel.setAttribute('aria-checked', isChecked);
+//   // You might also change styling via classes here if not using attribute selectors
+// }
+
+// // Initialize
+// updateSwitchState();
+
+// // Event listener for clicks on the label
+// switchLabel.addEventListener('click', () => {
+//   actualCheckbox.checked = !actualCheckbox.checked;
+//   updateSwitchState();
+// });
+
+
   return (
+    
     <div className={`${styles.appContainer} ${themeClass} extension-switcher-bar`} >
       <div className="extension-switcher-bar__title">
         <h1>Extensions List</h1>
@@ -13,6 +36,7 @@ const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
         
         <div className="extension-switcher-bar__radios">
           <input 
+            aria-hidden="true"
             type="radio" 
             id="all" 
             name="extension-status" 
@@ -21,26 +45,34 @@ const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
             defaultChecked 
           />
           <label 
-            htmlFor="all" 
+            htmlFor="all"
+            role="switch" 
             tabIndex={0} 
             onKeyDown={(e) => { if (e.key === 'Enter' || e.code === 'Enter' || e.code === 'NumpadEnter' || e.key === ' ') showAllExtensions() }}
+            aria-label='Show all extensions'
+            //aria-checked="true"
           >
             All
           </label>
           <input 
+            aria-hidden="true"
             type="radio" 
             id="active" 
             name="extension-status"  
             onChange={() => { showExtensionActive() }} 
           />
           <label 
-            htmlFor="active" 
+            htmlFor="active"
+            role="switch" 
             tabIndex={0} 
             onKeyDown={(e) => { if (e.key === 'Enter' || e.code === 'Enter' || e.code === 'NumpadEnter' || e.key === ' ') showExtensionActive() }}
+            aria-label='Show active extensions'
+            //aria-checked="false"
           >
             Active
           </label>
           <input 
+            aria-hidden="true"
             type="radio" 
             id="inactive" 
             name="extension-status"   
@@ -48,8 +80,11 @@ const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
           />
           <label 
             htmlFor="inactive" 
+            role="switch"
             tabIndex={0} 
             onKeyDown={(e) => { if (e.key === 'Enter' || e.code === 'Enter' || e.code === 'NumpadEnter' || e.key === ' ') showExtensionInactive() }}
+            aria-label='Show inactive extensions'
+            //aria-checked="false"
           >
             Inactive
           </label>

@@ -29,7 +29,7 @@ const ExtensionContext = createContext<ExtensionContextType | undefined>(undefin
 
 // Provider
 export const ExtensionProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>('light');
+  const [theme, setTheme] = useState<Theme>('dark');
 
   // Initialize extension list with data from JSON
   const initialExtensions: Extension[] = extensionData.map((ext: any) => ({
