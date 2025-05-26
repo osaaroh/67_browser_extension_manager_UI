@@ -1,5 +1,4 @@
 import ThemeSwitcher from '../../components/ThemeSwitcher'
-import style from '../../Theme.module.css';
 import ExtensionSwitcherBar from '../../components/ExtensionSwitcherBar'
 import ExtensionList from '../../components/ExtensionList'
 import './Home.css'

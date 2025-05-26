@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState } from 'react';
+import type { ReactNode } from 'react';
 import extensionData from '../data/data.json';
 // Types
 type Theme = 'light' | 'dark';
@@ -18,9 +19,9 @@ interface ExtensionContextType {
   toggleTheme: () => void;
   removeExtension: (id: string) => void;
   toggleExtensionActive: (id: string) => void;
-  showExtensionActive: () => Extension[];
-  showExtensionInactive: () => Extension[];
-  showAllExtensions: () => Extension[];
+  showExtensionActive: () => void;
+  showExtensionInactive: () => void;
+  showAllExtensions: () => void;
 }
 
 
