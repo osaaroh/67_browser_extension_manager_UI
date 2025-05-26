@@ -28,7 +28,7 @@ const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
 
   return (
     
-    <div className={`${styles.appContainer} ${themeClass} extension-switcher-bar`} >
+    <div className={`${themeClass} extension-switcher-bar`} >
       <div className="extension-switcher-bar__title">
         <h1>Extensions List</h1>
       </div>

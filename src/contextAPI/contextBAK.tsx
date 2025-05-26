@@ -115,7 +115,4 @@ export const useExtensionContext = () => {
   }
   return context;
 };
-function useEffect(arg0: () => void, arg1: Extension[][]) {
-  throw new Error('Function not implemented.');
-}
 

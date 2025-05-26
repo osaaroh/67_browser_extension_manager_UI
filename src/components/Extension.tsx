@@ -6,7 +6,7 @@ const {removeExtension, toggleExtensionActive} =  useExtensionContext();
 const {theme} = useExtensionContext();
 const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
   return (
-    <div className={`${styles.appContainer} ${themeClass} extension-card`}  >
+    <div className={`${themeClass} extension-card`}  >
       <div className="extension-card__header">
         <div className="extension-card__header--image">
           <img src={logo} alt="" />
