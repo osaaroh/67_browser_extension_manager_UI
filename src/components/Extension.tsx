@@ -13,7 +13,7 @@ const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
         </div>
 
         <div className="extension-card__content">
-          <h4 className='extension-card__content--title'>{name}</h4>
+          <h1 className='extension-card__content--title'>{name}</h1>
           <p className='extension-card__content--description'>{description}</p>
         </div>
       </div>
