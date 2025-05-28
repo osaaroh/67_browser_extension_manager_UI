@@ -36,7 +36,7 @@ const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
         
         <div className="extension-switcher-bar__radios">
           <input 
-            aria-hidden="true"
+            hidden
             type="radio" 
             id="all" 
             name="extension-status" 
@@ -55,7 +55,7 @@ const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
             All
           </label>
           <input 
-            aria-hidden="true"
+            hidden
             type="radio" 
             id="active" 
             name="extension-status"  
@@ -72,7 +72,7 @@ const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
             Active
           </label>
           <input 
-            aria-hidden="true"
+            hidden
             type="radio" 
             id="inactive" 
             name="extension-status"   
