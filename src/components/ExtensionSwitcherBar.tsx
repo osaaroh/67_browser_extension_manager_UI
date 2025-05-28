@@ -2,7 +2,7 @@ import styles from '../Theme.module.css';
 import './ExtensionSwitcherBar.css'
 import { useExtensionContext } from '../contextAPI/context.tsx'
 function ExtensionSwitcherBar() {
-  const { theme, showExtensionActive, showExtensionInactive, showAllExtensions } = useExtensionContext()
+  const { filter, theme, showExtensionActive, showExtensionInactive, showAllExtensions } = useExtensionContext()
 const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
 // Helper Function to toggle aria-checked on the label. Logic not implemented yet, but can be used to manage the state of the switch visually and for accessibility.
 
@@ -50,7 +50,7 @@ const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
             tabIndex={0} 
             onKeyDown={(e) => { if (e.key === 'Enter' || e.code === 'Enter' || e.code === 'NumpadEnter' || e.key === ' ') showAllExtensions() }}
             aria-label='Show all extensions'
-            //aria-checked="true"
+            aria-checked={filter=="all"?true:false}
           >
             All
           </label>
@@ -67,7 +67,7 @@ const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
             tabIndex={0} 
             onKeyDown={(e) => { if (e.key === 'Enter' || e.code === 'Enter' || e.code === 'NumpadEnter' || e.key === ' ') showExtensionActive() }}
             aria-label='Show active extensions'
-            //aria-checked="false"
+            aria-checked={filter=="active"?true:false}
           >
             Active
           </label>
@@ -84,7 +84,7 @@ const themeClass = theme === 'dark' ? styles.darkTheme : styles.lightTheme;
             tabIndex={0} 
             onKeyDown={(e) => { if (e.key === 'Enter' || e.code === 'Enter' || e.code === 'NumpadEnter' || e.key === ' ') showExtensionInactive() }}
             aria-label='Show inactive extensions'
-            //aria-checked="false"
+            aria-checked={filter=="inactive"?true:false}
           >
             Inactive
           </label>

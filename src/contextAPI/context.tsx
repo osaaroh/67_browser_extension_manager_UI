@@ -13,6 +13,7 @@ interface Extension {
 }
 
 interface ExtensionContextType {
+  filter: string; // 'all' | 'active' | 'inactive'
   theme: Theme;
   extensionList: Extension[];
   updatedExtensionList: Extension[];
@@ -99,6 +100,7 @@ const showAllExtensions = () => setFilter('all');
   return (
     <ExtensionContext.Provider
       value={{
+        filter,
         theme,
         extensionList,
         updatedExtensionList,
