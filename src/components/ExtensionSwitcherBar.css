@@ -44,3 +44,20 @@
     background-color: var(--card-bg-hover); /* Slightly lighter on hover */
     border-color: var(--card-border);
 }
+
+@media (max-width: 576px) {
+    .extension-switcher-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .extension-switcher-bar__radios {
+        width: 100%;
+        justify-content: space-between;
+        padding: 1rem 0rem; /* Adjust padding for smaller screens */
+    }
+
+    .extension-switcher-bar__title h1 {
+        font-size: 1.5rem; /* Adjust title size for smaller screens */
+    }
+}

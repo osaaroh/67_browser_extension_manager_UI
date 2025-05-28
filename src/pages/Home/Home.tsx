@@ -5,11 +5,14 @@ import './Home.css'
 function Home() {
   
   return (
-    <div className="home">
+    <>
         <ThemeSwitcher />
-        <ExtensionSwitcherBar />
-        <ExtensionList />
-    </div>
+        <main>
+            <ExtensionSwitcherBar />
+            <ExtensionList />
+        </main>
+        
+    </>
     
   )
 }

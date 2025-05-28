@@ -55,3 +55,7 @@ body {
     max-width: 1440px;
     width: 100%;
 }
+
+header, main{
+    padding: 0 2rem;
+}
